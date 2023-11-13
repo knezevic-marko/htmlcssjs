@@ -1,56 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Table</title>
-        <link rel="stylesheet" type="text/css" href="main.css"
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Save search</title>
+</head>
+<body style="color:white; background-color:#1d2630">
+    
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-5 mb-5"><strong>Save search</strong></h1>
+        </div>
+        <div class="main row justify-content-center">
+            <form action=""id="student-form" class="row justify-content-center mb-4" autocomplete="off">
+                <div class="col-10 mb-3">
+                    <label for="CarBrand">Car Brand</label>
+                    <input class="form-control" id="CarBrand" type="text" placeholder="Enter Car Brand">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="Model">Model</label>
+                    <input class="form-control" id="Model" type="text" placeholder="Enter Model">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="Price">Price</label>
+                    <input class="form-control" id="Price" type="text" placeholder="Enter Price">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="Year">Year</label>
+                    <input class="form-control" id="Year" type="text" placeholder="Enter Year">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="Body">Body</label>
+                    <input class="form-control" id="Body" type="text" placeholder="Enter Body">
+                </div>
+                <div class="col-10 mb-3">
+                    <label for="Fuel">Fuel</label>
+                    <input class="form-control" id="Fuel" type="text" placeholder="Enter Fuel">
+                </div>
+                <div class="col-10">
+                    <a href="" class="btn btn-success btn-sm save">Save</a>
+                </div>
+            </form>
+            <div class="col-10 mt-5">
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th>Car Brand</th>
+                            <th>Model</th>
+                            <th>Price</th>
+                            <th>Year</th>
+                            <th>Body</th>
+                            <th>Fuel</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="student-list">
+                        <tr>
+                            <td>Audi</td>
+                            <td>A4</td>
+                            <td>9000</td>
+                            <td>2009</td>
+                            <td>Sedan</td>
+                            <td>Diesel</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
+                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Opel</td>
+                            <td>Antara</td>
+                            <td>5750</td>
+                            <td>2007</td>
+                            <td>Sedan</td>
+                            <td>SUV</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
+                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-    <body>
-        <table>
-            <tr>
-                <th>S.No</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>PIN</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <th>1</th>
-                <th>Katarina</th>
-                <th>24</th>
-                <th>23434</th>
-                <th>Serbia</th>
-            </tr>
-            <tr>
-                <th>2</th>
-                <th>Jimmy</th>
-                <th>36</th>
-                <th>65565</th>
-                <th>China</th>
-            </tr>
-            <tr>
-                <th>3</th>
-                <th>Sam</th>
-                <th>28</th>
-                <th>28234</th>
-                <th>India</th>
-            </tr>
-            <tr>
-                <th>4</th>
-                <th>Mike</th>
-                <th>30</th>
-                <th>93494</th>
-                <th>USA</th>
-            </tr>
-            <tr>
-                <th>5</th>
-                <th>Lola</th>
-                <th>23</th>
-                <th>76431</th>
-                <th>Spain</th>
-            </tr>
-        
-        </table>
-    </body>
 
+</body>
 </html>
