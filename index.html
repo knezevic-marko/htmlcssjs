@@ -13,32 +13,32 @@
             <h1 class="display-5 mb-5"><strong>Save search</strong></h1>
         </div>
         <div class="main row justify-content-center">
-            <form action=""id="student-form" class="row justify-content-center mb-4" autocomplete="off">
-                <div class="col-10 mb-3">
+            <form action=""id="search" class="row justify-content-center mb-4" autocomplete="off">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="CarBrand">Car Brand</label>
                     <input class="form-control" id="CarBrand" type="text" placeholder="Enter Car Brand">
                 </div>
-                <div class="col-10 mb-3">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="Model">Model</label>
                     <input class="form-control" id="Model" type="text" placeholder="Enter Model">
                 </div>
-                <div class="col-10 mb-3">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="Price">Price</label>
                     <input class="form-control" id="Price" type="text" placeholder="Enter Price">
                 </div>
-                <div class="col-10 mb-3">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="Year">Year</label>
                     <input class="form-control" id="Year" type="text" placeholder="Enter Year">
                 </div>
-                <div class="col-10 mb-3">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="Body">Body</label>
                     <input class="form-control" id="Body" type="text" placeholder="Enter Body">
                 </div>
-                <div class="col-10 mb-3">
+                <div class="col-10 col-md-8 mb-3">
                     <label for="Fuel">Fuel</label>
                     <input class="form-control" id="Fuel" type="text" placeholder="Enter Fuel">
                 </div>
-                <div class="col-10">
+                <div class="col-8">
                     <a href="" class="btn btn-success btn-sm save">Save</a>
                 </div>
             </form>
@@ -73,8 +73,20 @@
                             <td>Antara</td>
                             <td>5750</td>
                             <td>2007</td>
-                            <td>Sedan</td>
                             <td>SUV</td>
+                            <td>Diesel</td>
+                            <td>
+                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
+                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Volkswagen</td>
+                            <td>Passat B7</td>
+                            <td>8000</td>
+                            <td>2012</td>
+                            <td>Sedan</td>
+                            <td>Diesel</td>
                             <td>
                                 <a href="" class="btn btn-warning btn-sm edit">Edit</a>
                                 <a href="" class="btn btn-danger btn-sm delete">Delete</a>
@@ -86,6 +98,6 @@
         </div>
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
