@@ -3,101 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Save search</title>
+    <title>Search Save</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="color:white; background-color:#1d2630">
-    
-    <div class="container mt-5">
-        <div class="text-center">
-            <h1 class="display-5 mb-5"><strong>Save search</strong></h1>
-        </div>
-        <div class="main row justify-content-center">
-            <form action=""id="search" class="row justify-content-center mb-4" autocomplete="off">
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="CarBrand">Car Brand</label>
-                    <input class="form-control" id="CarBrand" type="text" placeholder="Enter Car Brand">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="Model">Model</label>
-                    <input class="form-control" id="Model" type="text" placeholder="Enter Model">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="Price">Price</label>
-                    <input class="form-control" id="Price" type="text" placeholder="Enter Price">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="Year">Year</label>
-                    <input class="form-control" id="Year" type="text" placeholder="Enter Year">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="Body">Body</label>
-                    <input class="form-control" id="Body" type="text" placeholder="Enter Body">
-                </div>
-                <div class="col-10 col-md-8 mb-3">
-                    <label for="Fuel">Fuel</label>
-                    <input class="form-control" id="Fuel" type="text" placeholder="Enter Fuel">
-                </div>
-                <div class="col-8">
-                    <a href="" class="btn btn-success btn-sm save">Save</a>
-                </div>
-            </form>
-            <div class="col-10 mt-5">
-                <table class="table table-striped table-dark">
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit()" autocomplete="off">
+                    <div>
+                        <label>Brand</label>
+                        <input type="text" name="Brand" id="Brand">
+                    </div>
+                    <div>
+                        <label>Model</label>
+                        <input type="text" name="Model" id="Model">
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="Price" id="Price">
+                    </div>
+                    <div>
+                        <label>Year</label>
+                        <input type="text" name="Year" id="Year">
+                    </div>
+                    <div>
+                        <label>Fuel</label>
+                        <input type="text" name="Fuel" id="Fuel">
+                    </div>
+                    <div class="form-action-button">
+                        <input type="submit" value="Save">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="Search">
                     <thead>
                         <tr>
-                            <th>Car Brand</th>
+                            <th>Brand</th>
                             <th>Model</th>
                             <th>Price</th>
                             <th>Year</th>
-                            <th>Body</th>
                             <th>Fuel</th>
-                            <th>Actions</th>
+                            <th></th>
                         </tr>
                     </thead>
-                    <tbody class="student-list">
-                        <tr>
-                            <td>Audi</td>
-                            <td>A4</td>
-                            <td>9000</td>
-                            <td>2009</td>
-                            <td>Sedan</td>
-                            <td>Diesel</td>
-                            <td>
-                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Opel</td>
-                            <td>Antara</td>
-                            <td>5750</td>
-                            <td>2007</td>
-                            <td>SUV</td>
-                            <td>Diesel</td>
-                            <td>
-                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Volkswagen</td>
-                            <td>Passat B7</td>
-                            <td>8000</td>
-                            <td>2012</td>
-                            <td>Sedan</td>
-                            <td>Diesel</td>
-                            <td>
-                                <a href="" class="btn btn-warning btn-sm edit">Edit</a>
-                                <a href="" class="btn btn-danger btn-sm delete">Delete</a>
-                            </td>
-                        </tr>
+                    <tbody>
+
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
-
+            </td>
+        </tr>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
