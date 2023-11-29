@@ -1,6 +1,11 @@
+var selectedRow = null;
+
 function onFormSubmit(){
     var formData = readFormData();
-    insertNewRecord(formData);
+    if(selectedRow == null)
+        insertNewRecord(formData);
+        else
+        updateRecord(formData);
     resetForm();
 }
 
@@ -28,8 +33,8 @@ function insertNewRecord(data) {
     cell5 = newRow.insertCell(4);
     cell5.innerHTML = data.Fuel;
     cell6 = newRow.insertCell(5);
-    cell6.innerHTML = `<a onClick="onEdit(this)">Edit  </a>
-                        <a>Delete</a>`;
+    cell6.innerHTML = `<button onClick="onEdit(this)">Edit  </button>
+                        <button onClick="onDelete(this)">Delete</button>`;
 }
 
 function resetForm(){
@@ -38,6 +43,7 @@ function resetForm(){
     document.getElementById("Price").value = "";
     document.getElementById("Year").value = "";
     document.getElementById("Fuel").value = "";
+    var selectedRow = null;
 }
 
 function onEdit(td){
@@ -47,4 +53,20 @@ function onEdit(td){
     document.getElementById("Price").value = selectedRow.cells[2].innerHTML;
     document.getElementById("Year").value = selectedRow.cells[3].innerHTML;
     document.getElementById("Fuel").value = selectedRow.cells[4].innerHTML;
+}
+
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.Brand;
+    selectedRow.cells[1].innerHTML = formData.Model;
+    selectedRow.cells[2].innerHTML = formData.Price;
+    selectedRow.cells[3].innerHTML = formData.Year;
+    selectedRow.cells[4].innerHTML = formData.Fuel;
+}
+
+function onDelete(td) {
+    if (confirm('Are you sure you want to delete?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("Search").deleteRow(row.rowIndex);
+        resetForm();
+    }
 }
